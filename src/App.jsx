@@ -37,10 +37,11 @@ export default function App() {
     <div className="min-h-screen bg-base text-text transition-colors duration-500">
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home theme={theme} onToggle={toggleTheme} />} />
-          <Route path="/projects/:slug" element={<ProjectPage theme={theme} onToggle={toggleTheme} />} />
+          <Route path="/portfolio" element={<Home theme={theme} onToggle={toggleTheme} />} />
+          <Route path="/portfolio/projects/:slug" element={<ProjectPage theme={theme} onToggle={toggleTheme} />} />
         </Routes>
       </AnimatePresence>
     </div>
   );
 }
+
